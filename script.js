@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const bookingData = {
                 clientName: document.getElementById('client-name').value,
                 contactNumber: document.getElementById('contact-number').value,
-                packageName: document.getElementById('package-name-input').value, // ชื่อฟิลด์ต้องตรงกับใน HTML
+                packageName: document.getElementById('package-name-input').value,
                 shootDate: document.getElementById('shoot-date').value,
                 shootTime: document.getElementById('shoot-time').value,
                 location: document.getElementById('location').value
@@ -151,5 +151,4 @@ document.addEventListener('DOMContentLoaded', () => {
             imageModal.style.display = "none";
         }
     });
-
 });

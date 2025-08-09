@@ -1,12 +1,12 @@
-// admin_script.js
 document.addEventListener('DOMContentLoaded', () => {
-    // กำหนดราคาของแต่ละแพ็กเกจไว้ใน JavaScript (เพื่อแก้ปัญหาที่ไม่มีฟิลด์ price ใน DB)
+    // กำหนดราคาของแต่ละแพ็กเกจไว้ใน JavaScript
     const packagePrices = {
         'Bronze': '2,000',
         'Silver': '3,000',
         'Gold': '5,000',
         'Platinum': '15,000',
-        'Custom': 'ตามบรีฟงาน' 
+        'Custom': 'ตามบรีฟงาน',
+        'Plus': 'ตามบรีฟงาน',
     };
 
     const billModal = document.getElementById('bill-modal');
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
             })
             .then(bookings => {
                 const tableBody = document.getElementById('booking-data');
-                tableBody.innerHTML = ''; // ล้างข้อมูลเดิมในตารางก่อนแสดงผลใหม่
+                tableBody.innerHTML = '';
 
                 if (bookings.length === 0) {
                     tableBody.innerHTML = '<tr><td colspan="8">ยังไม่มีข้อมูลการจอง</td></tr>';
